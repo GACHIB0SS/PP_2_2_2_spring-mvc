@@ -1,6 +1,11 @@
 package web.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import web.model.Car;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import java.util.*;
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -26,4 +31,8 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         return new String[]{"/"};
     }
 
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        super.onStartup(servletContext);
+    }
 }

@@ -1,19 +1,11 @@
+
 package web.service;
 
+import web.model.Car;
 
-import web.models.Car;
+import java.util.*;
 
-import java.util.List;
-
-
-public class CarService {
-
-
-    public static    List<Car> getCountCar(List<Car> carList, int count) {
-        return carList.stream().limit(count).toList();
-    }
-
-
-
-
+public interface CarService {
+    List<Car> getAllCars();
+    List<Car> getSomeCars(int count);
 }
